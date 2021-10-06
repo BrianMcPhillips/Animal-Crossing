@@ -1,6 +1,6 @@
 import React from 'react';
-import Loading from '../Loading/Loading';
+import AllVillagers from '../../containers/AllVillagers';
 
 export default function App() {
-  return <Loading />;
+  return <AllVillagers />;
 }
