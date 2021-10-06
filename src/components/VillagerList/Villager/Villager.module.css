@@ -1,0 +1,12 @@
+.Villager {
+  width: 5rem;
+}
+
+img {
+  padding: 0;
+  max-width: 5rem;
+}
+
+figcaption {
+  text-align: center;
+}
