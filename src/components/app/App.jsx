@@ -1,6 +1,6 @@
 import React from 'react';
-import AllVillagers from '../../containers/AllVillagers';
+import VillagerList from '../VillagerList/VillagerList';
 
 export default function App() {
-  return <AllVillagers />;
+  return <VillagerList />;
 }
