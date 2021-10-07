@@ -8,4 +8,10 @@ describe('AllVillagers container', () => {
 
     screen.getByAltText('Loading');
   });
+
+  it('displays a list of Villagers', () => {
+    render(<AllVillagers />);
+
+    const villagerList = screen.getByTestId('villagers');
+  });
 });

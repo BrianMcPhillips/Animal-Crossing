@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Villager from './Villager/Villager';
+import styles from './VillagerList.module.css';
 
 const VillagerList = ({ villagers }) => {
   const villagerElements = villagers.map(villager => (
     <li key={villager._id}>
-      <Villager name={villager.name} image={villager.image} /> 
+      <Villager {...villager} /> 
     </li>
   ));
   return (
-    <ul>
+    <ul data-testid="villagers" className={styles.VillagerList}>
       {villagerElements}
     </ul>
   );
