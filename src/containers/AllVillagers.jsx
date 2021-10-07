@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Loading from '../components/Loading/Loading';
 import VillagerList from '../components/VillagerList/VillagerList';
+import { getVillagers } from '../services/animal-crossing';
 
 export default class AllVillagers extends Component {
   state = {
@@ -9,13 +10,7 @@ export default class AllVillagers extends Component {
   }
 
   componentDidMount = () => {
-    fetch('https://ac-vill.herokuapp.com/villagers')
-      .then(res => res.json())
-      .then(json => json.map(villager => ({
-        _id: villager._id,
-        name: villager.name,
-        image: villager.image
-      })))
+    getVillagers()
       .then(villagers => {
         this.setState({ villagers, loading: false });
       });
