@@ -20,7 +20,7 @@ export default class AllVillagers extends Component {
     if(loading) return <Loading />;
     return (
       <div>
-        <VillagerList />
+        <VillagerList villagers={villagers}/>
       </div>
     );
   }
