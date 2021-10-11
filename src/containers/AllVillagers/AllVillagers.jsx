@@ -19,7 +19,7 @@ export default class AllVillagers extends Component {
     const { loading, villagers } = this.state;
     if(loading) return <Loading />;
     return (
-      <div>
+      <div data-testid="allVillagers">
         <VillagerList villagers={villagers}/>
       </div>
     );
