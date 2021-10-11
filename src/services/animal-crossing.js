@@ -7,3 +7,13 @@ export const getVillagers = () => {
       image: villager.image
     })));
 };
+
+export const getVillager = (id) => {
+  fetch(`https://ac-vill.herokuapp.com/villagers/${id}`)
+    .then(res => res.json())
+    .then(villager => ({
+      _id: villager._id,
+      name: villager.name,
+      image: villager.image
+    }));
+};

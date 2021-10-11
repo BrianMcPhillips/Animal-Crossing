@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VillagerList component renders a Villager List 1`] = `
+<DocumentFragment>
+  <ul
+    class="VillagerList"
+    data-testid="villagers"
+  >
+    <li>
+      <figure
+        class="Villager"
+      >
+        <img
+          alt="MyVillager"
+        />
+        <figcaption>
+          MyVillager
+        </figcaption>
+      </figure>
+    </li>
+  </ul>
+</DocumentFragment>
+`;

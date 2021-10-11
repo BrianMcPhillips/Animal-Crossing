@@ -13,5 +13,6 @@ describe('AllVillagers container', () => {
     render(<AllVillagers />);
 
     const villagerList = screen.getByTestId('villagers');
+    expect(villagerList).not.toBeEmptyDOMElement();
   });
 });
