@@ -1,6 +1,17 @@
 import React from 'react';
-import VillagerList from '../VillagerList/VillagerList';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom';
+import AllVillagers from '../../containers/AllVillagers/AllVillagers';
 
 export default function App() {
-  return <VillagerList />;
+  return (
+    <Router>
+      <Switch>
+      <Route exact path="/" component={AllVillagers}/>
+      </Switch>
+    </Router>
+  );
 }
