@@ -2,11 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Villager from './Villager/Villager';
 import styles from './VillagerList.module.css';
+import { Link } from 'react-router-dom';
 
 const VillagerList = ({ villagers }) => {
   const villagerElements = villagers.map(villager => (
     <li key={villager._id}>
-      <Villager {...villager} /> 
+      <Link to={`/detail/${villager._id}`}>
+        <Villager {...villager} /> 
+      </Link>
     </li>
   ));
   return (
