@@ -1,5 +1,9 @@
 export const getVillagers = () => {
-  fetch('https://ac-vill.herokuapp.com/villagers')
+  fetch('https://cors-anywhere.herokuapp.com/https://ac-vill.herokuapp.com/villagers', {
+    headers: {
+      Origin: null
+    }
+  })
     .then(res => res.json())
     .then(json => json.map(villager => ({
       _id: villager._id,
@@ -9,7 +13,11 @@ export const getVillagers = () => {
 };
 
 export const getVillager = (id) => {
-  fetch(`https://ac-vill.herokuapp.com/villagers/${id}`)
+  fetch(`https://cors-anywhere.herokuapp.com/https://ac-vill.herokuapp.com/villagers/${id}`, {
+    headers: {
+      Origin: null
+    }
+  })
     .then(res => res.json())
     .then(villager => ({
       _id: villager._id,
