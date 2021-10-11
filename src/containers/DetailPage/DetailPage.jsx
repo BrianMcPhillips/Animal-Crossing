@@ -18,7 +18,9 @@ export default class DetailPage extends Component {
     const { loading, villager } = this.state;
     if(loading) return <Loading />;
     return (
-      <Villager {...villager}/>
+      <div data-testid="detail">
+        <Villager {...villager}/>
+      </div>
     );
   }
 }

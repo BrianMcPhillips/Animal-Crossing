@@ -12,7 +12,7 @@ describe('AllVillagers container', () => {
   it('displays a list of Villagers', () => {
     render(<AllVillagers />);
 
-    const villagerList = screen.getByTestId('villagers');
-    expect(villagerList).not.toBeEmptyDOMElement();
+    const detail = screen.getByTestId('detail');
+    expect(detail).not.toBeEmptyDOMElement();
   });
 });
