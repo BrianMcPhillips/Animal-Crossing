@@ -1,5 +1,5 @@
 export const getVillagers = () => {
-  fetch('https://ac-vill.herokuapp.com/villagers')
+  return fetch('https://thingproxy.freeboard.io/fetch/https://ac-vill.herokuapp.com/villagers')
     .then(res => res.json())
     .then(json => json.map(villager => ({
       _id: villager._id,
@@ -9,7 +9,7 @@ export const getVillagers = () => {
 };
 
 export const getVillager = (id) => {
-  fetch(`https://ac-vill.herokuapp.com/villagers/${id}`)
+  return fetch(`https://thingproxy.freeboard.io/fetch/https://ac-vill.herokuapp.com/villagers/${id}`)
     .then(res => res.json())
     .then(villager => ({
       _id: villager._id,
