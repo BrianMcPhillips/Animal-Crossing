@@ -9,13 +9,12 @@ export default class DetailPage extends Component {
     loading: true,
     villager: null
   }
-  static propTypes = {
-    match: PropTypes.object.isRequired,
-  }
+  // static propTypes = {
+  //   match: PropTypes.object.isRequired,
+  // }
 
   componentDidMount = () => {
-    const id = this.props.match.params.id;
-    getVillager(id)
+    getVillager()
       .then(villager => this.setState({ villager, loading: false }));
   }
   render() {
